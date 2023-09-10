@@ -1,0 +1,23 @@
+// 숫자의 합 구하기
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int N;
+	
+	string numbers;
+	cin >> N;
+	cin >> numbers;
+
+	int sum = 0;
+	
+	for (int i = 0; i < numbers.length(); i++)
+	{
+		// numbers[i]를 정수로 계산하여 sum에 누적
+		// 문자열을 숫자형으로 변경하기 위해 아스키코드 값 사용
+		// numbers[i] - '0' 또는 number[i] - 48 사용
+		sum += numbers[i] - 48;
+	}
+	cout << sum << "\n";
+}
