@@ -1,0 +1,29 @@
+//구간 합 구하기 1
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	ios::sync_with_stdio(false);	// 시간단축 / c++ 독립버퍼 사용
+	cin.tie(NULL);
+	cout.tie(NULL);
+
+	int N;	// 데이터 개수
+	int L;	// 질의 개수
+	int S[100001] = {};
+
+	cin >> N >> L;
+	for (int i = 1; i <= N; i++)
+	{
+		int temp;
+		cin >> temp;
+		S[i] = S[i - 1] + temp;	//구간 합 미리 구하기
+	}
+	for (int i = 0; i < L; i++)
+	{
+		int start, end;
+		cin >> start >> end;
+		cout << S[end] - S[start-1] << endl;
+	}
+
+}
