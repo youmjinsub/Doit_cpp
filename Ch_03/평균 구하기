@@ -1,0 +1,27 @@
+// 평균 구하기
+#include<iostream>
+using namespace std;
+
+int main (void)
+{
+	int num = 0;
+	int A[1000];
+	long sum = 0;
+	long max = 0;
+	cin >> num;
+	
+	for (int i = 0; i < num; i++)
+	{
+		cin >> A[i];
+		if (A[i] > max)
+		{
+			max = A[i];
+		}
+		sum = sum + A[i];
+	}
+		
+	double result = sum * 100.0 / max / num;
+	cout << result << endl;
+
+}
+
